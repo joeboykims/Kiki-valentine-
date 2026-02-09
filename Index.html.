@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Kiki ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #ff0055, #7000ff); /* Pink to Purple Gradient */
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px); /* Frosted glass effect */
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            max-width: 80%;
+        }
+        h1 { font-family: 'Cursive', serif; font-size: 2.5rem; }
+        .buttons { margin-top: 30px; }
+        .btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .yes { background: #ff2d75; color: white; }
+        .no { background: rgba(255, 255, 255, 0.2); color: white; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <p>💕💕</p>
+        <h1>Will You Be My Valentine, Kiki?</h1>
+        <p>"From the moment you came into my life, everything changed for the better."</p>
+        <div class="buttons">
+            <button class="btn yes" onclick="alert('Yay! I love you! ❤️')">YES 💘</button>
+            <button class="btn no" id="noBtn">NO 💔</button>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Make the "No" button run away!
+        const noBtn = document.getElementById('noBtn');
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+            noBtn.style.position = 'absolute';
+            noBtn.style.left = x + 'px';
+            noBtn.style.top = y + 'px';
+        });
+    </script>
+</body>
+</html>
